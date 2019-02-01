@@ -13,25 +13,13 @@
 
 <body>
     <div class="wrapper">
-       
-                
         <h1>Input BG Number</h1>
         <input id="number" type="number" name="number" placeholder="number" class="input"/>
-        <input type="submit" value="Send" class="btn_one"onclick="calcinsulin()">
+        <input type="submit" value="Get" class="btn_one"onclick="calcinsulin()">
         <h1 id="results" class="results"></h1>
     </div>
 
     <script>
-    function openNav(){
-        document.getElementById("open").style.display = "none";
-        document.getElementById("nav").style.width = "100%";
-        
-    }
-    function closeNav(){
-      document.getElementById("nav").style.width = "0";
-    document.getElementById("open").style.display = "block";
-            
-        }
         function calcinsulin(){
             var val1 = document.getElementById("number").value;
             var calc = 0;
@@ -40,7 +28,7 @@
             var result = 0;
             calc = val1 - 120;
             result = calc / 30;
-            
+        
             document.getElementById("results").innerHTML = Math.round(result);
     
             
